@@ -1,0 +1,57 @@
+body{
+	background-image: url('images/playdice1.jpg');
+	background-size: 100% 100%;
+	font-family: 'Architect Daughter', cursive;
+	font-size: 45px;
+	font-weight: bolder;
+}
+div{
+	font-family: 'Architect Daughter', cursive;
+}
+
+
+section{
+	margin-top: 200px;
+    color: white;
+    
+}
+.vs{
+	padding-top: 60px;
+	font-size: 45px;
+	font-weight: bolder; 
+}
+.heading{
+	padding-top: 250px;
+	font-size: x-large;
+}
+.footer{
+	color: white;
+	margin-top: 100px;
+}
+.challenger{
+	color: green;
+	font-size: 45px;
+}
+
+@media (max-width: 1028px){
+	 section{
+		padding-top: 300px;
+		
+	}
+	#winner, #loser, #draw{
+		padding-top: 300px;
+		font-size: 45px;
+	}
+}
+p{
+	color: blue;
+	font-size: 45px;
+}
+
+input{
+	
+	border-radius: 3px;
+	border:1px solid blue;
+	font-size: 50px;
+
+}
