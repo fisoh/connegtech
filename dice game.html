@@ -115,8 +115,12 @@ document.querySelector('.play').addEventListener('click', function() {
 	 document.querySelector('.rounds').innerHTML= 'ROUND: '+round;
     
    if(round===10  &&  player2Score>player1Score ){
+     var winnersong= new Audio('icons/tada.mp3');
+    winnersong.play();
    	$('section').hide();
+
    	$('#winner').show();
+   
    }else if(round===10 && player1Score>player2Score){
    	$('section').hide();
     $('#loser').show();
@@ -137,7 +141,8 @@ function play() {
 	var imagediced = 'images/dice'+ imagedice+'.png';
 	document.querySelectorAll('img')[0].setAttribute('src', imagediced);
 	score1.push(imagedice);
-
+   var song = new Audio('icons/shake.mp3');
+      song.play();
    
 	var  imagedice2 =  Math.floor(Math.random()*6)+1;
 	var  imagediced2 = 'images/dice'+ imagedice2+'.png';
@@ -152,6 +157,7 @@ function play() {
       }else{
       	document.querySelector('h3').innerHTML = 'draw';
       };
+
 
 
 };
