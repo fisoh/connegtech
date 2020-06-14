@@ -37,11 +37,11 @@ section{
 
 @media (max-width: 1028px){
 	 section{
-		padding-top: 300px;
+		padding-top: 100px;
 		
 	}
 	#winner, #loser, #draw{
-		padding-top: 300px;
+		padding-top: 150px;
 		font-size: 45px;
 	}
 }
