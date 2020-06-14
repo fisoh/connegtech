@@ -1,5 +1,5 @@
 body{
-	background-image: url('images/playdice1.jpg');
+	background-color: black;
 	background-size: 100% 100%;
 	font-family: 'Architect Daughter', cursive;
 	font-size: 45px;
@@ -13,6 +13,7 @@ div{
 section{
 	margin-top: 200px;
     color: white;
+    font-size: 30px;
     
 }
 .vs{
@@ -29,8 +30,9 @@ section{
 	margin-top: 100px;
 }
 .challenger{
-	color: green;
+	color: orange;
 	font-size: 45px;
+	font-weight: bolder;
 }
 
 @media (max-width: 1028px){
@@ -44,14 +46,16 @@ section{
 	}
 }
 p{
-	color: blue;
+	color: white;
 	font-size: 45px;
 }
 
 input{
 	
-	border-radius: 3px;
+	border-radius: 8px;
 	border:1px solid blue;
 	font-size: 50px;
+	width: 550px;
+	height: 100px;
 
 }

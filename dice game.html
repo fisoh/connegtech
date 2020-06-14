@@ -6,40 +6,48 @@
 	 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Architect+Daughter&display=swap" >
 </head>
-<body class="text-center">
+<body class="text-center" style="background-color: black;">
 
    <div class="heading">
-   	  <input type="text" placeholder="challenger name" class="insert"><br>
+   	  <input type="text" placeholder="challenger name" class="insert" style="font-size: 70px;"><br>
    	  <button class="btn btn-success btn lg myname" style="font-size: 50px;">enter</button>
    </div>
-  <section>
+  <section style="line-height: 80px;">
    <div class="row">
-   	 <div class="col-5">
+   	 <div class="col-5" style="font-size: 35px;">
    	  <h1>CONNEG</h1>
    	  <h1>(the contender)</h1>
    	  <img class="player1" src="images/dice1.png" width="200px" height="200px">
-
-   	  <h1 class="score1"></h1>
+       <h1 class="score1" style="font-size: 45px; padding-top: 50px; color: orange"></h1>
+   	  
    	</div>
    	<div class="col-2">
    		<h1 class="vs">VS</h1>
-   		<h1 class="rounds"></h1>
+   		<h1 class="rounds" style="font-size: 45px;"></h1>
    	</div>
    	 <div class="col-5">
    	 	<h1 class="challenger">?</h1>
    	 	<h1>(the challenger)</h1>
    	 	<img class="player2" src="images/dice1.png" width="200px" height="200px">
-   	 
-   	 	<h1 class="score2"></h1>
+   	 <h1 class="score2" style="font-size: 45px; padding-top: 50px; color: orange;"></h1>
+   	 	
    	 </div>
    </div>
 
    <div> 
-      <button type="button" class="play btn btn-primary btn-lg" style="font-size: 50px;"><img src="icons/play.svg" width="50px" height="50px">  play</button>
+      <button type="button" class="play btn btn-primary btn-lg" style="font-size: 70px;"><img src="icons/play.svg" width="80px" height="80px">  play</button>
+   </div>
+   <div>
+     <h3 style="font-size: 45px; padding-top: 50px; color: yellow;"></h3>
    </div>
 
-  <div>
-	<h3></h3>
+  <div class="row">
+	<div class="col-6">
+   
+  </div>
+  <div class="col-6">
+    
+  </div>
   </div>
 </section>
 
@@ -60,7 +68,7 @@
 <div id="loser">
 	<h1 style="color: red;">SORRY!!! LOOSER</h1>
 	<p> you didn't stand a chance against the mighty alian king CONNEG.</p>
-	<button class="btn btn-warning btn-lg" onclick="window.location.reload()">play again</button>
+	<button class="btn btn-warning btn-lg" onclick="window.location.reload()" style="width: 150px; height: 100px;">play again</button>
 </div>
 <div id="draw">
   <h1 style="color: green;">its a DRAW</h1>
@@ -96,13 +104,14 @@ document.querySelector('.myname').addEventListener('click', function() {
 
 document.querySelector('.play').addEventListener('click', function() {
 	play();
+  $('.score1, .score2').show();
     
       var player1Score = score1.reduce(scored);
       var player2Score = score2.reduce(scored);
-       document.querySelector('.score1').innerHTML = 'score:'+player1Score * 100;
-       document.querySelector('.score2').innerHTML = 'score:'+player2Score * 100;
+       document.querySelector('.score1').innerHTML = 'SCORE: '+player1Score * 100;
+       document.querySelector('.score2').innerHTML = 'SCORE: '+player2Score * 100;
      var round= score1.length;
-	 document.querySelector('.rounds').innerHTML= 'round: '+round;
+	 document.querySelector('.rounds').innerHTML= 'ROUND: '+round;
     
    if(round===10  &&  player2Score>player1Score ){
    	$('section').hide();
